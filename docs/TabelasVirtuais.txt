@@ -1,0 +1,36 @@
+As tabelas virtuais são tabelas configuradas como meta-dados no modelo de dados do BPM.
+
+Para utlizar precisador :
+
+- MDL atualizado com metamodelo de tabelas.
+- Plugin de publicação atualizado.
+- Groovys de suporte publicados
+Projeto TIVIT/scripts
+Suporte ao CRUD
+LoadTabVirt.groovy
+UpdateTabVirt.groovy
+InsertTabVirt.groovy
+LookupTabVirt.groovy (Não implementado ainda)
+
+Suporte ao combos de formulários 
+LoadTabVirtCombos.groovy
+
+Suporte para AdmVTABS.xhtml
+GeraTabVirt.groovy (Para gerar tabelas virtuais a partir do meta-model)
+ImportTabVirt.groovy (para importação de dados de planilha xls).
+
+
+As tabelas são criadas utilizando-se um modelo e-core da seguinte forma :
+
+Criar as tabelas no modelo e-core.
+Gerar o arquivo de meta-modelo com a opção (botão direito no ecore) "Accio Generate Meta Model"
+Será gerado o arquivo *.model.
+Esse arquivo *.model dever publicado com a opção "Accio Meta-Model Publisb" 
+Utilizar o form (Projeto ADM) ADM/Forms/Adm/AdmVTAB.xhtml para criar as tabelas virtuais no banco.
+
+Do ecore podemos gerar os cruds que podem ser publicados como CRUDs normais.
+
+O /TIVIT/eforms.ecore é um exemplo de tabelas virtuais criadas. 
+O Campo "Abstrato" da tabela do modelo deve estar true para gerar CRUD de tabela virtual.
+
+

@@ -1,0 +1,48 @@
+!http://www.accio.com.br/imagens/simples.jpg!
+
+h1. Título
+
+Teste de *parágrafo*[1]. Procura no "Google":http://google.com.
+__Itálico__, _emfase_, **negrito**, +sublinhado+, -tachado-.
+
+"Accio":https://www.accio.com.br.
+
+# A first item
+# A second item
+# A third
+
+h2. Sub-título
+
+# Fuel could be:
+## Coal
+## Gasoline
+## Electricity
+# Humans need only:
+## Water
+## Protein
+
+h3. Sub-3
+
+* Fuel could be:
+** Coal
+** Gasoline
+** Electricity
+* Humans need only:
+** Water
+** Protein
+
+
+|_. name |_. age |_. sex |
+| joan | 24 | f |
+| archie | 29 | m |
+| bella | 45 | f |
+
+|/3. spans 3 rows | a |
+| b |
+| c |
+
+|\2. spans two cols |
+| col 1 | col 2 | 
+
+fn1. Downhere, in fact.
+

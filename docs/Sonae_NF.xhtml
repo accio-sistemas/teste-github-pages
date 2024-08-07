@@ -1,0 +1,1167 @@
+<xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xf="http://www.w3.org/2002/xforms"
+	xmlns:xxforms="http://orbeon.org/oxf/xml/xforms"
+	xmlns:sql="http://orbeon.org/oxf/xml/sql"
+	xmlns:exforms="http://www.exforms.org/exf/1-0"
+	xmlns:saxon="http://saxon.sf.net/"
+	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:fr="http://orbeon.org/oxf/xml/form-runner"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ev="http://www.w3.org/2001/xml-events" lang="pt">
+<xhtml:head>
+	<xhtml:title>Dados Gerais - Tela1</xhtml:title>
+	<xf:model id="modelCrud">
+		<xf:instance xmlns="" id="tmp">
+			<tmp> <erros /> <valido /> <textoSalvar>Salvo</textoSalvar> <GS25>
+			<GS25IMD7008-COPIA /> <GS25PIA7143-SA /> <GS25LIN7140 /> <GS30PAC7065 />
+			<GS30PAC7224 /> <GS25QTY6063-21>0</GS25QTY6063-21> <GS28PRI5125-BRG>0.00</GS28PRI5125-BRG>
+			<GS28PRI5125-BRN>0.00</GS28PRI5125-BRN> <TAX5286-DETALHE-ICM>0.00</TAX5286-DETALHE-ICM>
+			<TAX5278-DETALHE-ICM>0.00</TAX5278-DETALHE-ICM> <MOA5025-DETALHE-124-ICM>0.00</MOA5025-DETALHE-124-ICM>
+			<TAX5286-DETALHE-IPI>0.00</TAX5286-DETALHE-IPI> <TAX5278-DETALHE-IPI>0.00</TAX5278-DETALHE-IPI>
+			<MOA5025-DETALHE-124-IPI>0.00</MOA5025-DETALHE-124-IPI> <TAX5286-DETALHE-ICR>0.00</TAX5286-DETALHE-ICR>
+			<TAX5278-DETALHE-ICR>0.00</TAX5278-DETALHE-ICR> <MOA5025-DETALHE-124-ICR>0.00</MOA5025-DETALHE-124-ICR>
+			<PCD5245-DETALHE-TD>0.00</PCD5245-DETALHE-TD> <MOA5025-DETALHE-204-TD>0.00</MOA5025-DETALHE-204-TD>
+			<MOA5025-DETALHE-23-OTE>0.00</MOA5025-DETALHE-23-OTE> <AUX_VLR_ITEM_SONAE>0.00</AUX_VLR_ITEM_SONAE>
+			</GS25> </tmp>
+		</xf:instance>
+		<xf:instance xmlns="" id="process_data">
+			<process />
+		</xf:instance>
+		<xf:instance xmlns="" id="combos">
+			<combos>
+				<tab nome="PontosOperacionaisSonae" grupo="" usuario="" campo=""/> 
+				<tab nome="PontosOperacionaisFornecedor" grupo="" usuario="" campo=""/> 
+				<tab nome="CadastroProdutosFornecedor" grupo="" usuario="" campo=""/> 
+				<tab nome="TipoNF" grupo="" usuario="" campo=""/> 
+				<tab nome="NaturezaOp" grupo="" usuario="" campo=""/> 
+			</combos>
+		</xf:instance>
+		<xf:instance xmlns="" id="work">
+			<work> <pRef /> <associatedFile /> <searchRef /></work>
+		</xf:instance>
+		<xf:instance xmlns="" id="order">
+			<table>
+				<GS02NAD3036-SU />
+				<BGM1004-NUM />
+				<BGM1004-SER />
+				<BGM1001-DESC />
+				<DTM2005-137 />
+				<GS09TDT3127-CGC />
+				<DTM2005-35 />
+				<GS01RFF1153-CNO-SONA />
+				<GS01RFF1153-CNO-DESC />
+				<GS02NAD3035-BY />
+				<GS02NAD3035-DP />
+				<GS02NAD3035-II-COPIA />
+				<GS02NAD3035-IV />
+				<GS02NAD3036-BY />
+				<GS02NAD3036-DP />
+				<GS02NAD3036-II-COPIA />
+				<GS02NAD3036-IV />
+				<GS09> <GS09TDT3127-CGC /> <GS09TDT3128 /> <GS11TOD4053-COPIA />
+				</GS09>
+				<GS25> <GS25IMD7008-COPIA /> <GS25PIA7143-SA /> <GS25LIN7140 />
+				<GS30PAC7065 /> <GS30PAC7224 /> <GS25QTY6063-21>0</GS25QTY6063-21> <GS28PRI5125-BRG>0.00</GS28PRI5125-BRG>
+				<GS28PRI5125-BRN>0.00</GS28PRI5125-BRN> <TAX5286-DETALHE-ICM>0.00</TAX5286-DETALHE-ICM>
+				<TAX5278-DETALHE-ICM>0.00</TAX5278-DETALHE-ICM> <MOA5025-DETALHE-124-ICM>0.00</MOA5025-DETALHE-124-ICM>
+				<TAX5286-DETALHE-IPI>0.00</TAX5286-DETALHE-IPI> <TAX5278-DETALHE-IPI>0.00</TAX5278-DETALHE-IPI>
+				<MOA5025-DETALHE-124-IPI>0.00</MOA5025-DETALHE-124-IPI> <TAX5286-DETALHE-ICR>0.00</TAX5286-DETALHE-ICR>
+				<TAX5278-DETALHE-ICR>0.00</TAX5278-DETALHE-ICR> <MOA5025-DETALHE-124-ICR>0.00</MOA5025-DETALHE-124-ICR>
+				<PCD5245-DETALHE-TD>0.00</PCD5245-DETALHE-TD> <MOA5025-DETALHE-204-TD>0.00</MOA5025-DETALHE-204-TD>
+				<MOA5025-DETALHE-23-OTE>0.00</MOA5025-DETALHE-23-OTE> <AUX_VLR_ITEM_SONAE>0.00</AUX_VLR_ITEM_SONAE>
+				</GS25>
+				<MOA5025-79>0.00</MOA5025-79>
+				<MOA5025-39>0.00</MOA5025-39>
+				<MOA5025-52>0.00</MOA5025-52>
+				<MOA5025-50>0.00</MOA5025-50>
+				<MOA5025-124-IRF>0.00</MOA5025-124-IRF>
+				<MOA5025-124-ISS>0.00</MOA5025-124-ISS>
+				<MOA5025-124-FRR>0.00</MOA5025-124-FRR>
+				<TAX5286-IPI>0.00</TAX5286-IPI>
+				<MOA5025-124-IPI>0.00</MOA5025-124-IPI>
+				<TAX5286-ICM>0.00</TAX5286-ICM>
+				<MOA5025-124-ICM>0.00</MOA5025-124-ICM>
+				<TAX5286-ICR>0.00</TAX5286-ICR>
+				<MOA5025-124-ICR>0.00</MOA5025-124-ICR>
+				<TOTAL-ITEM-SONAE>0.00</TOTAL-ITEM-SONAE>
+			</table>
+		</xf:instance>
+		<xf:bind nodeset="instance('order')">
+			<xf:bind nodeset="GS02NAD3036-SU" required="true()" type="xf:string" />
+			<xf:bind nodeset="BGM1004-NUM" required="true()" type="xf:string" />
+			<xf:bind nodeset="BGM1004-SER" required="true()" type="xf:string" />
+			<xf:bind nodeset="BGM1001-DESC" required="true()" type="xf:string" />
+			<xf:bind nodeset="DTM2005-137" required="true()" type="xf:date" />
+			<xf:bind nodeset="GS09TDT3127-CGC" required="true()" type="xf:date" />
+			<xf:bind nodeset="DTM2005-35" required="true()" type="xf:date" />
+			<xf:bind nodeset="GS01RFF1153-CNO-SONA" required="true()"
+				type="xf:string" />
+			<xf:bind nodeset="GS01RFF1153-CNO-DESC" required="true()"
+				type="xf:string" />
+			<xf:bind nodeset="GS02NAD3036-BY" required="true()" type="xf:string" />
+			<xf:bind nodeset="GS02NAD3036-DP" required="true()" type="xf:string" />
+			<xf:bind nodeset="GS02NAD3036-II-COPIA" required="true()"
+				type="xf:string" />
+			<xf:bind nodeset="GS02NAD3036-IV" required="true()" type="xf:string" />
+			<xf:bind nodeset="GS25">
+				<xf:bind nodeset="GS25IMD7008-COPIA" required="true()"
+					type="xf:string" />
+				<xf:bind nodeset="GS25LIN7140" required="true()" type="xf:string" />
+				<xf:bind nodeset="GS25QTY6063-21" required="true()"
+					type="xf:integer" />
+				<xf:bind nodeset="GS28PRI5125-BRG" required="true()"
+					type="xf:double" />
+				<xf:bind nodeset="TAX5286-DETALHE-ICM" readonly="true()"
+					type="xf:double" />
+				<xf:bind nodeset="TAX5278-DETALHE-ICM" readonly="false()"
+					type="xf:double" />
+				<xf:bind nodeset="MOA5025-DETALHE-124-ICM" readonly="true()"
+					type="xf:double" />
+				<xf:bind nodeset="TAX5286-DETALHE-IPI" readonly="false()"
+					type="xf:double" />
+				<xf:bind nodeset="TAX5278-DETALHE-IPI" readonly="false()"
+					type="xf:double" />
+				<xf:bind nodeset="MOA5025-DETALHE-124-IPI" readonly="true()"
+					type="xf:double" />
+				<xf:bind nodeset="TAX5286-DETALHE-ICR" readonly="false()"
+					type="xf:double" />
+				<xf:bind nodeset="TAX5278-DETALHE-ICR" readonly="false()"
+					type="xf:double" />
+				<xf:bind nodeset="MOA5025-DETALHE-124-ICR" readonly="true()"
+					type="xf:double" />
+				<xf:bind nodeset="PCD5245-DETALHE-TD" readonly="false()"
+					type="xf:double" />
+				<xf:bind nodeset="MOA5025-DETALHE-204-TD" readonly="true()"
+					type="xf:double" />
+				<xf:bind nodeset="MOA5025-DETALHE-23-OTE" readonly="false()"
+					type="xf:double" />
+				<xf:bind nodeset="AUX_VLR_ITEM_SONAE" readonly="true()"
+					type="xf:double" />
+			</xf:bind>
+			<xf:bind nodeset="GS09">
+				<xf:bind nodeset="GS09TDT3127-CGC" required="true()"
+					type="xf:string" />
+				<xf:bind nodeset="GS09TDT3128" required="true()" type="xf:string" />
+				<xf:bind nodeset="GS11TOD4053-COPIA" required="true()"
+					type="xf:string" />
+
+			</xf:bind>
+			<xf:bind nodeset="MOA5025-79" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="MOA5025-39" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="MOA5025-52" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="MOA5025-50" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="MOA5025-124-IRF" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="MOA5025-124-ISS" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="MOA5025-124-FRR" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="TAX5286-IPI" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="MOA5025-124-IPI" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="TAX5286-ICM" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="MOA5025-124-ICM" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="TAX5286-ICR" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="MOA5025-124-ICR" readonly="true()" type="xf:double" />
+			<xf:bind nodeset="TOTAL-ITEM-SONAE" readonly="true()"
+				type="xf:double" />
+
+		</xf:bind>
+		<xf:submission id="load.process_data" method="post"
+			action="/ProcessExecutionServlet?comando=processInfo"
+			ref="instance('process_data')" replace="instance" validate="false">
+			<xf:message ref="instance('res.dados.gerais')/errors/load.combo"
+				ev:event="xforms-submit-error" level="modal" />
+		</xf:submission>
+		<xf:submission id="save.var" method="post"
+			action="/ProcessExecutionServlet?comando=setVar&amp;var=order"
+			ref="instance('order')" replace="none" validate="false">
+			<xf:message ref="instance('res.dados.gerais')/errors/load.combo"
+				ev:event="xforms-submit-error" level="modal" />
+		</xf:submission>
+		<xf:submission id="load.var" method="post"
+			action="/ProcessExecutionServlet?comando=getVar&amp;var=order"
+			ref="instance('order')" replace="instance" validate="false" />
+		<xf:submission id="load.combos" method="post"
+			action="/GroovyExecServlet?command=scripts/LoadTabVirtCombos"
+			ref="instance('combos')" replace="instance" validate="false" />
+		<xf:submission id="save.searchRef" method="post"
+			action="/ProcessExecutionServlet?comando=salvarItem&amp;searchRef=replace&amp;associatedFile={instance('work')/associatedFile}"
+			ref="instance('work')" replace="none" validate="false" />
+		<xf:action ev:event="xforms-ready">
+			<xf:setvalue ref="instance('order')/DTM2005_137"
+				value="xs:date(substring(now(), 1, 10))" />
+			<xf:send submission="load.process_data" />
+			<xf:send submission="load.var" />
+			<xf:send submission="load.combos" />
+		</xf:action>
+	</xf:model>
+	<xhtml:style>
+	#content {
+		background-image: url('data:image/jpg;base64,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') !important;
+	    font-family: Arial;
+	}
+	
+	#content table.table tr td {
+	    vertical-align: middle;
+		border-top: none;
+	}
+	
+	#content *:not(input) {
+	    border-color: #444466;
+	}
+	
+	#content .nav-tabs .active a {
+	    background-color: #446;
+	    color: white;
+	    font-weight: bold;
+	}
+	
+	#content h1 {
+		font-family: Arial Rounded MT Bold,Arial,sans-Serif;
+		font-size: 23px;
+		margin-left: -10px;
+		margin-right: -10px;
+		text-decoration: none;
+		text-indent: 10px;
+		color: #CCDFFF;
+		background: #889;
+	}
+	
+	#content table.table tr th {
+		font-size: 99%;
+		font-weight: bold;
+		color: #FFF;
+		background-image: url('data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAaAGQDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAQBAgMFBv/EADAQAAEDAgUDAQUJAAAAAAAAAAEAAgMEERITITGRUVKSQRRCU3KBIyQyNENUYWKx/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAEDBAX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARITUQL/2gAMAwEAAhEDEQA/APG5lVfSol8ypzalwvnyi39ymsLNf9WrhGegXpQ5w5pMQL6q4BqJfo8ozKtujppSOuMpxojvYn6qXuY0YB6evVIc4JMRx1JNxPLb5ygy1fx5Rp3lNgMIu3RFmOO6Q5wSYoJKs2+3l8ypx1X7iXzKdDGA7q2GGxJOvolfOEkzn46y/wCYl8irY6rTFUS+ZTZyzYBAy8e+gSHOFkxQuqrn7xLb5yq46sbzy/R5XRcIxqBoVUsitvr1SHOEkxHNqh+vL5lCbwx9UJDnCyZz21Cl1RfY6Bb5cfY3hGVH2N4WF7w1qRgKkEb6qpqjc3TGVGPcbwgxR74G8JcxUjBlVb1UioBJN1sYo7fgbwpy4xsxvCXMVIw9rNtHaKBU9SmDGw7sbwoyo/ht4S94KkYmfS4dqqmctTGVGfcbwpy2djeEuYqRk2qOG11mag3sTomRHGNmN4UZUfY3hLmKkL+0fyhMZUfY3hCXMVI//9k=');
+		background-repeat-y: no-repeat;
+		background-repeat: repeat-x;
+		background-position: center;
+		background-color: #446;
+	}
+	
+	#content table.table table.table tr td {
+	    font-weight: bold;
+	}
+	
+	#content table.table tr td.minimum {
+		width: 150px;
+	}
+	
+	#content table.table tr td.center {
+		text-align: center;
+	}
+	
+	#content table.table {
+	    background: none
+	}
+	</xhtml:style>
+</xhtml:head>
+<xhtml:body>
+	<xf:group id="form-exec-group">
+		<xhtml:h1>Sonae EDI - Nota Fiscal</xhtml:h1>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#dados" data-toggle="tab">Dados
+					Gerais NF</a></li>
+			<li><a href="#frete" data-toggle="tab">Frete</a></li>
+			<li><a href="#itens" data-toggle="tab">Itens do Pedido</a></li>
+			<li><a href="#detalhes" data-toggle="tab">Detalhes do item</a></li>
+			<li><a href="#totais" data-toggle="tab">Totais</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<xhtml:div class="tab-content">
+			<xhtml:div class="tab-pane active" id="dados">
+				<xhtml:table class="table table-bordered">
+					<xhtml:tr>
+						<xhtml:td>
+							<xhtml:table class="table">
+								<xhtml:tr>
+									<xhtml:td class="minimum">Fornecedor</xhtml:td>
+									<xhtml:td>
+
+										<!--<xf:input xmlns:xf="http://www.w3.org/2002/xforms" combo="COMBO_DEFAULT_WHITE_LINE" autoSearch="true" ref="instance('order')/GS02NAD3036-SU"/>-->
+										<xf:select1 incremental="true"
+											ref="instance('order')/GS02NAD3036-SU">
+											<xf:item>
+												<xf:label>Selecione</xf:label>
+												<xf:value></xf:value>
+											</xf:item>
+											<xf:itemset
+												nodeset="instance('combos')/tabelavirtual[@campo eq 'PontosOperacionaisFornecedor']/items">
+												<xf:label ref="@razaosocial" />
+												<xf:value ref="@razaosocial" />
+											</xf:itemset>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/GS02NAD3035-SU"
+													value="instance('combos')/tabelavirtual[@campo eq 'PontosOperacionaisFornecedor']/items[@razaosocial eq instance('order')/GS02NAD3036-SU]/@gln" />
+											</xf:action>
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:select1>
+									</xhtml:td>
+								</xhtml:tr>
+							</xhtml:table>
+							<xhtml:table class="table">
+								<xhtml:tr>
+									<xhtml:td>Nota Fiscal N�</xhtml:td>
+									<xhtml:td>
+										<xf:input size="9" ref="instance('order')/BGM1004-NUM">
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:input>
+									</xhtml:td>
+									<xhtml:td>S�rie</xhtml:td>
+									<xhtml:td>
+										<xf:input size="3" ref="instance('order')/BGM1004-SER">
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:input>
+									</xhtml:td>
+									<xhtml:td>Tipo</xhtml:td>
+									<xhtml:td>
+										<!--<xf:input xmlns:xf="http://www.w3.org/2002/xforms" combo="COMBO_DEFAULT_WHITE_LINE" autoSearch="true" ref="instance('order')/BGM1001-DESC"/>-->
+										<xf:select1 incremental="true"
+											ref="instance('order')/BGM1001-DESC">
+											<xf:item>
+												<xf:label>Selecione</xf:label>
+												<xf:value></xf:value>
+											</xf:item>
+											<xf:itemset
+												nodeset="instance('combos')/tabelavirtual[@campo eq 'TipoNF']/items">
+												<xf:label ref="@descricao" />
+												<xf:value ref="@descricao" />
+											</xf:itemset>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/BGM1004-NUM"
+													value="instance('combos')/tabelavirtual[@campo eq 'TipoNF']/items[@descricao eq instance('order')/BGM1001-DESC]/@codigo" />
+											</xf:action>
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:select1>
+									</xhtml:td>
+								</xhtml:tr>
+							</xhtml:table>
+							<xhtml:table class="table">
+								<xhtml:tr>
+									<xhtml:td class="minimum">Data Emiss�o</xhtml:td>
+									<xhtml:td>
+										<xf:input size="11" ref="instance('order')/DTM2005-137">
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:input>
+									</xhtml:td>
+									<xhtml:td class="minimum">Data Entrega</xhtml:td>
+									<xhtml:td>
+										<!--             <xf:input ref="GS09TDT3127-CGC" /> -->
+										<xf:input ref="instance('order')/DTM2005-35">
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+							</xhtml:table>
+							<xhtml:table class="table">
+								<xhtml:tr>
+									<xhtml:td class="minimum">N� do Pedido</xhtml:td>
+									<xhtml:td>
+										<xf:input ref="instance('order')/GS01RFF1153-CNO-SONA">
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">C�d.Nat.Opera��o</xhtml:td>
+									<xhtml:td>
+										<!--<xf:input xmlns:xf="http://www.w3.org/2002/xforms" combo="COMBO_DEFAULT_WHITE_LINE" autoSearch="true" ref="instance('order')/GS01RFF1153-CNO-DESC-SONA"/>-->
+										<xf:select1 incremental="true"
+											ref="instance('order')/GS01RFF1153-CNO-DESC">
+											<xf:item>
+												<xf:label>Selecione</xf:label>
+												<xf:value></xf:value>
+											</xf:item>
+											<xf:itemset
+												nodeset="instance('combos')/tabelavirtual[@campo eq 'NaturezaOp']/items">
+												<xf:label ref="@descricao" />
+												<xf:value ref="@descricao" />
+											</xf:itemset>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/GS01RFF1153-CNO-SONA"
+													value="instance('combos')/tabelavirtual[@campo eq 'NaturezaOp']/items[@descricao eq instance('order')/GS01RFF1153-CNO-DESC]/@codigo" />
+											</xf:action>
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:select1>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Comprador</xhtml:td>
+									<xhtml:td>
+
+										<!--<xf:input xmlns:xf="http://www.w3.org/2002/xforms" combo="COMBO_DEFAULT_WHITE_LINE" autoSearch="true" ref="instance('order')/GS02NAD3036-BY"/>-->
+										<xf:select1 incremental="true"
+											ref="instance('order')/GS02NAD3036-BY">
+											<xf:item>
+												<xf:label>Selecione</xf:label>
+												<xf:value></xf:value>
+											</xf:item>
+											<xf:itemset
+												nodeset="instance('combos')/tabelavirtual[@campo eq 'PontosOperacionaisSonae']/items">
+												<xf:label ref="@razaosocial" />
+												<xf:value ref="@razaosocial" />
+											</xf:itemset>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/GS02NAD3035-BY"
+													value="instance('combos')/tabelavirtual[@campo eq 'PontosOperacionaisSonae']/items[@razaosocial eq instance('order')/GS02NAD3036-BY]/@gln" />
+											</xf:action>
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:select1>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Local Entrega</xhtml:td>
+									<xhtml:td>
+
+										<!--<xf:input xmlns:xf="http://www.w3.org/2002/xforms" combo="COMBO_DEFAULT_WHITE_LINE" autoSearch="true" ref="instance('order')/GS02NAD3036-DP"/>-->
+										<xf:select1 incremental="true"
+											ref="instance('order')/GS02NAD3036-DP">
+											<xf:item>
+												<xf:label>Selecione</xf:label>
+												<xf:value></xf:value>
+											</xf:item>
+											<xf:itemset
+												nodeset="instance('combos')/tabelavirtual[@campo eq 'PontosOperacionaisSonae']/items">
+												<xf:label ref="@razaosocial" />
+												<xf:value ref="@razaosocial" />
+											</xf:itemset>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/GS02NAD3035-DP"
+													value="instance('combos')/tabelavirtual[@campo eq 'PontosOperacionaisSonae']/items[@razaosocial eq instance('order')/GS02NAD3036-DP]/@gln" />
+											</xf:action>
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:select1>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Emissor</xhtml:td>
+									<xhtml:td>
+										<!--<xf:input xmlns:xf="http://www.w3.org/2002/xforms" combo="COMBO_DEFAULT_WHITE_LINE" autoSearch="true" ref="instance('order')/GS02NAD3036-II-COPIA"/>-->
+										<xf:select1 incremental="true"
+											ref="instance('order')/GS02NAD3036-II-COPIA">
+											<xf:item>
+												<xf:label>Selecione</xf:label>
+												<xf:value></xf:value>
+											</xf:item>
+											<xf:itemset
+												nodeset="instance('combos')/tabelavirtual[@campo eq 'PontosOperacionaisFornecedor']/items">
+												<xf:label ref="@razaosocial" />
+												<xf:value ref="@razaosocial" />
+											</xf:itemset>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/GS02NAD3035-II-COPIA"
+													value="instance('combos')/tabelavirtual[@campo eq 'PontosOperacionaisFornecedor']/items[@razaosocial eq instance('order')/GS02NAD3036-II-COPIA]/@gln" />
+											</xf:action>
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:select1>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Faturado</xhtml:td>
+									<xhtml:td>
+
+										<!--<xf:input xmlns:xf="http://www.w3.org/2002/xforms" combo="COMBO_DEFAULT_WHITE_LINE" autoSearch="true" ref="instance('order')/GS02NAD3036-IV"/>-->
+										<xf:select1 incremental="true"
+											ref="instance('order')/GS02NAD3036-IV">
+											<xf:item>
+												<xf:label>Selecione</xf:label>
+												<xf:value></xf:value>
+											</xf:item>
+											<xf:itemset
+												nodeset="instance('combos')/tabelavirtual[@campo eq 'PontosOperacionaisSonae']/items">
+												<xf:label ref="@razaosocial" />
+												<xf:value ref="@razaosocial" />
+											</xf:itemset>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/GS02NAD3035-IV"
+													value="instance('combos')/tabelavirtual[@campo eq 'PontosOperacionaisSonae']/items[@razaosocial eq instance('order')/GS02NAD3036-IV]/@gln" />
+											</xf:action>
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:select1>
+									</xhtml:td>
+								</xhtml:tr>
+							</xhtml:table>
+						</xhtml:td>
+					</xhtml:tr>
+				</xhtml:table>
+				<xhtml:td>
+					<xhtml:font size="2" color="#FF0000" face="Verdana" class="texto" /> IMPORTANTE: A partir de 17/08/2009, voce pode digitar o numero da Nota Fiscal com 9 digitos e a serie com 3 digitos.</xhtml:td>
+			</xhtml:div>
+			<xhtml:div class="tab-pane" id="frete">
+				<xhtml:table class="table table-bordered">
+					<xhtml:tr>
+						<xhtml:th>Transportadora</xhtml:th>
+					</xhtml:tr>
+					<xhtml:tr>
+						<xhtml:td>
+							<xhtml:table class="table">
+								<xhtml:tr>
+									<xhtml:td class="minimum">CNPJ</xhtml:td>
+									<xhtml:td>
+										<!--  Fazer consist�ncia de CGC v�lido  -->
+										<xf:input ref="instance('order')/GS09/GS09TDT3127-CGC">
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Nome</xhtml:td>
+									<xhtml:td>
+										<xf:input ref="instance('order')/GS09/GS09TDT3128">
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Tipo de Frete</xhtml:td>
+									<xhtml:td>
+										<xf:input ref="instance('order')/GS09/GS11TOD4053-COPIA">
+											<xf:alert>Obrigat�rio</xf:alert>
+										</xf:input>
+										<!-- 										<xf:select1 incremental="true" -->
+										<!-- 											ref="instance('order')/GS09/GS11TOD4053-COPIA"> -->
+										<!-- 											<xf:item> -->
+										<!-- 												<xf:label>Selecione</xf:label> -->
+										<!-- 												<xf:value></xf:value> -->
+										<!-- 											</xf:item> -->
+										<!-- 											<xf:itemset -->
+										<!-- 												nodeset="instance('combos')/tabelavirtual[@campo eq 'GS11TOD4053-COPIA']/items"> -->
+										<!-- 												<xf:label ref="@descricao" /> -->
+										<!-- 												<xf:value ref="@descricao" /> -->
+										<!-- 											</xf:itemset> -->
+										<!-- 											<xf:action ev:event="xforms-value-changed" /> -->
+										<!-- 											<xf:alert>Obrigat�rio</xf:alert> -->
+										<!-- 										</xf:select1> -->
+									</xhtml:td>
+								</xhtml:tr>
+							</xhtml:table>
+						</xhtml:td>
+					</xhtml:tr>
+				</xhtml:table>
+
+			</xhtml:div>
+			<xhtml:div class="tab-pane" id="itens">
+				<xhtml:table class="table table-bordered">
+					<xhtml:tr>
+						<xhtml:th>Item Nota</xhtml:th>
+					</xhtml:tr>
+					<xhtml:tr>
+						<xhtml:td>
+							<xhtml:table class="table table-bordered">
+								<xhtml:tr>
+									<xhtml:td>Descri��o do Produto</xhtml:td>
+									<xhtml:td>EAN / DUN</xhtml:td>
+									<xhtml:td>Quantidade</xhtml:td>
+									<xhtml:td>Pre�o</xhtml:td>
+									<xhtml:td class="acoes">
+										<xf:trigger id="inserir-item">
+											<xf:label>Adicionar</xf:label>
+											<xf:action ev:event="DOMActivate">
+												<xf:insert context="instance('order')" nodeset="GS25"
+													origin="instance('tmp')/GS25" at="last()" position="after" />
+											</xf:action>
+										</xf:trigger>
+									</xhtml:td>
+								</xhtml:tr>
+
+								<xf:repeat id="repeater_GS25-1" ref="instance('order')/GS25">
+									<xhtml:tr>
+										<xhtml:td>
+											<!--<xf:input xmlns:xf="http://www.w3.org/2002/xforms" combo="COMBO_DEFAULT_WHITE_LINE" autoSearch="true" size="35" ref="GS25IMD7008-COPIA"/>-->
+											<xf:select1 incremental="true" ref="GS25IMD7008-COPIA">
+												<xf:item>
+													<xf:label>Selecione</xf:label>
+													<xf:value></xf:value>
+												</xf:item>
+												<xf:itemset
+													nodeset="instance('combos')/tabelavirtual[@campo eq 'CadastroProdutosFornecedor']/items">
+													<xf:label ref="@descricao" />
+													<xf:value ref="@descricao" />
+												</xf:itemset>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('repeater_GS25-1')/GS25PIA7143-SA"
+														value="instance('combos')/tabelavirtual[@campo eq 'CadastroProdutosFornecedor']/items[@descricao eq xxforms:context('repeater_GS25-1')/GS25IMD7008-COPIA]/@codinterno" />
+													<xf:setvalue
+														ref="xxforms:context('repeater_GS25-1')/GS25LIN7140"
+														value="instance('combos')/tabelavirtual[@campo eq 'CadastroProdutosFornecedor']/items[@descricao eq xxforms:context('repeater_GS25-1')/GS25IMD7008-COPIA]/@ean" />
+													<xf:setvalue
+														ref="xxforms:context('repeater_GS25-1')/GS30PAC7065"
+														value="instance('combos')/tabelavirtual[@campo eq 'CadastroProdutosFornecedor']/items[@descricao eq xxforms:context('repeater_GS25-1')/GS25IMD7008-COPIA]/@tipoembal" />
+													<xf:setvalue
+														ref="xxforms:context('repeater_GS25-1')/GS30PAC7224"
+														value="instance('combos')/tabelavirtual[@campo eq 'CadastroProdutosFornecedor']/items[@descricao eq xxforms:context('repeater_GS25-1')/GS25IMD7008-COPIA]/@qtdeembal" />
+
+												</xf:action>
+												<xf:alert>Obrigat�rio</xf:alert>
+											</xf:select1>
+										</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="GS25LIN7140">
+												<xf:alert>Obrigat�rio</xf:alert>
+											</xf:input>
+										</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="GS25QTY6063-21">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('repeater_GS25-1')/TAX5286-DETALHE-ICM"
+														value="xxforms:context('repeater_GS25-1')/GS25QTY6063-21 * xxforms:context('repeater_GS25-1')/GS28PRI5125-BRG" />
+													<!-- 													<xf:action if="xxforms:context('repeater_GS25-1')/MOA5025-DETALHE-204-TD eq 0.0) and (xxforms:context('repeater_GS25-1')/PCD5245-DETALHE-TD ne 0.0)"> -->
+													<xf:setvalue
+														ref="xxforms:context('repeater_GS25-1')/MOA5025-DETALHE-204-TD"
+														value="(xxforms:context('repeater_GS25-1')/GS28PRI5125-BRG - xxforms:context('repeater_GS25-1')/GS28PRI5125-BRN)* xxforms:context('repeater_GS25-1')/GS25QTY6063-21" />
+													<!-- 													</xf:action> -->
+													<xf:setvalue
+														ref="xxforms:context('repeater_GS25-1')/AUX_VLR_ITEM_SONAE"
+														value="(((xxforms:context('repeater_GS25-1')/GS28PRI5125-BRG * xxforms:context('repeater_GS25-1')/GS25QTY6063-21) - xxforms:context('repeater_GS25-1')/MOA5025-DETALHE-204-TD) + xxforms:context('repeater_GS25-1')/MOA5025-DETALHE-124-IPI + xxforms:context('repeater_GS25-1')/MOA5025-DETALHE-23-OTE)" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+										<xhtml:td>
+											<!-- TAX5286-DETALHE-ICM = GS25QTY6063-21 * GS28PRI5125-BRG -->
+											<!-- Se MOA5025-DETALHE-204-TD = 0 E PCD5245-DETALHE-TD <> 0
+													MOA5025-DETALHE-204-TD = (GS28PRI5125-BRG - GS28PRI5125-BRN) * GS25QTY6063-21 -->
+											<xf:input ref="GS28PRI5125-BRG">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('repeater_GS25-1')/TAX5286-DETALHE-ICM"
+														value="xxforms:context('repeater_GS25-1')/GS25QTY6063-21 * xxforms:context('repeater_GS25-1')/GS28PRI5125-BRG" />
+													<!-- 													<xf:action if="xxforms:context('repeater_GS25-1')/MOA5025-DETALHE-204-TD = 0 and xxforms:context('repeater_GS25-1')/PCD5245-DETALHE-TD ne 0"> -->
+													<xf:setvalue
+														ref="xxforms:context('repeater_GS25-1')/MOA5025-DETALHE-204-TD"
+														value="(xxforms:context('repeater_GS25-1')/GS28PRI5125-BRG - xxforms:context('repeater_GS25-1')/GS28PRI5125-BRN)* xxforms:context('repeater_GS25-1')/GS25QTY6063-21" />
+													<!-- 													</xf:action> -->
+													<xf:setvalue
+														ref="xxforms:context('repeater_GS25-1')/AUX_VLR_ITEM_SONAE"
+														value="(((xxforms:context('repeater_GS25-1')/GS28PRI5125-BRG * xxforms:context('repeater_GS25-1')/GS25QTY6063-21) - xxforms:context('repeater_GS25-1')/MOA5025-DETALHE-204-TD) + xxforms:context('repeater_GS25-1')/MOA5025-DETALHE-124-IPI + xxforms:context('repeater_GS25-1')/MOA5025-DETALHE-23-OTE)" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+										<xhtml:td class="acoes">
+											<xf:trigger>
+												<xf:label><i class="fa fa-edit"></i></xf:label>
+												<xf:action ev:event="DOMActivate">
+													<xf:setindex repeat="repeater_GS25-1" index="index('repeater_GS25-1')"/>
+													<xxforms:script>$('.nav-tabs a[href="#detalhes"]').tab('show');</xxforms:script>
+												</xf:action>
+											</xf:trigger>
+											
+											<xf:trigger>
+												<xf:label>
+													<i class="fa fa-trash-o"></i>
+												</xf:label>
+												<xf:action if="count(instance('order')/GS25) gt 1"
+													ev:event="DOMActivate">
+													<xf:delete nodeset="instance('order')/GS25"
+														at="index('repeater_GS25-1')" />
+												</xf:action>
+											</xf:trigger>
+										</xhtml:td>
+									</xhtml:tr>
+								</xf:repeat>
+							</xhtml:table>
+						</xhtml:td>
+					</xhtml:tr>
+				</xhtml:table>
+			</xhtml:div>
+			
+			<xhtml:div class="tab-pane" id="detalhes">
+				<xf:group id="GS25"
+					ref="instance('order')/GS25[index('repeater_GS25-1')]">
+
+					<xhtml:table class="table table-bordered">
+
+						<xhtml:tr>
+							<xhtml:th colspan="4">Detalhe do Item </xhtml:th>
+						</xhtml:tr>
+						<xhtml:tr>
+							<xhtml:td colspan="4">
+								<xhtml:table class="table">
+									<xhtml:tr>
+										<xhtml:td>EAN / DUN Produto</xhtml:td>
+										<xhtml:td>
+											<xf:output ref="GS25LIN7140" />
+										</xhtml:td>
+										<xhtml:td colspan="2">
+											<xf:output ref="GS25IMD7008-COPIA" />
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td>Quantidade</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="GS25QTY6063-21">
+												<xf:alert>Obrigat�rio</xf:alert>
+											</xf:input>
+										</xhtml:td>
+										<xhtml:td>Pre�o L�quido</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="GS28PRI5125-BRN">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('GS25')/TAX5286-DETALHE-ICM"
+														value="xxforms:context('GS25')/GS25QTY6063-21 * xxforms:context('GS25')/GS28PRI5125-BRG" />
+													<!-- 												<xf:action if="MOA5025-DETALHE-204-TD = 0 and PCD5245-DETALHE-TD ne 0"> -->
+													<xf:setvalue
+														ref="xxforms:context('GS25')/MOA5025-DETALHE-204-TD"
+														value="(xxforms:context('GS25')/GS28PRI5125-BRG - xxforms:context('GS25')/GS28PRI5125-BRN)* xxforms:context('GS25')/GS25QTY6063-21" />
+													<!-- 												</xf:action> -->
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td>Pre�o Bruto</xhtml:td>
+										<xhtml:td>
+											<xf:output ref="GS28PRI5125-BRG" />
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td>Tipo Embalagem</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="GS30PAC7065" />
+										</xhtml:td>
+										<xhtml:td>Unidades / Embalagem</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="GS30PAC7224" />
+										</xhtml:td>
+									</xhtml:tr>
+								</xhtml:table>
+							</xhtml:td>
+						</xhtml:tr>
+						<xhtml:tr>
+							<xhtml:th>ICMS</xhtml:th>
+							<xhtml:th>IPI</xhtml:th>
+						</xhtml:tr>
+						<xhtml:tr>
+							<xhtml:td>
+								<xhtml:table class="table">
+									<xhtml:tr>
+										<xhtml:td>Base C�lculo</xhtml:td>
+										<xhtml:td>
+											<!-- MOA5025-DETALHE-124-ICM = TAX5286-DETALHE-ICM * (TAX5278-DETALHE-ICM div 100) -->
+
+											<xf:input ref="TAX5286-DETALHE-ICM">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('GS25')/MOA5025-DETALHE-124-ICM"
+														value="xxforms:context('GS25')/TAX5286-DETALHE-ICM * xxforms:context('GS25')/TAX5278-DETALHE-ICM div 100" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td>Percentual (%)</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="TAX5278-DETALHE-ICM">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('GS25')/MOA5025-DETALHE-124-ICM"
+														value="xxforms:context('GS25')/TAX5286-DETALHE-ICM * xxforms:context('GS25')/TAX5278-DETALHE-ICM div 100" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td>Valor</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="MOA5025-DETALHE-124-ICM">
+												<xf:alert>Obrigat�rio</xf:alert>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+								</xhtml:table>
+							</xhtml:td>
+							<xhtml:td>
+								<xhtml:table class="table">
+									<xhtml:tr>
+										<!-- MOA5025-DETALHE-124-IPI = TAX5286-DETALHE-IPI* (TAX5278-DETALHE-IPI / 100) -->
+										<xhtml:td>Base C�lculo</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="TAX5286-DETALHE-IPI">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('GS25')/MOA5025-DETALHE-124-IPI"
+														value="xxforms:context('GS25')/TAX5286-DETALHE-IPI * xxforms:context('GS25')/TAX5278-DETALHE-IPI div 100" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td>Percentual (%)</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="TAX5278-DETALHE-IPI">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('GS25')/MOA5025-DETALHE-124-IPI"
+														value="xxforms:context('GS25')/TAX5286-DETALHE-IPI * xxforms:context('GS25')/TAX5278-DETALHE-IPI div 100" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td>Valor</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="MOA5025-DETALHE-124-IPI">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('GS25')/AUX_VLR_ITEM_SONAE"
+														value="(((xxforms:context('GS25')/GS28PRI5125-BRG * xxforms:context('GS25')/GS25QTY6063-21) - xxforms:context('GS25')/MOA5025-DETALHE-204-TD) + xxforms:context('GS25')/MOA5025-DETALHE-124-IPI + xxforms:context('GS25')/MOA5025-DETALHE-23-OTE)" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+								</xhtml:table>
+							</xhtml:td>
+						</xhtml:tr>
+					</xhtml:table>
+					<xhtml:table class="table table-bordered">
+						<xhtml:tr>
+							<xhtml:th>ICM de Responsabilidade</xhtml:th>
+							<xhtml:th>Descontos / Despesas</xhtml:th>
+						</xhtml:tr>
+						<xhtml:tr>
+							<xhtml:td>
+								<xhtml:table class="table">
+									<xhtml:tr>
+										<!-- MOA5025-DETALHE-124-ICR = TAX5286-DETALHE-ICR* (TAX5278-DETALHE-ICR / 100)  -->
+										<xhtml:td>Base C�lculo</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="TAX5286-DETALHE-ICR">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('GS25')/MOA5025-DETALHE-124-ICR"
+														value="xxforms:context('GS25')/TAX5286-DETALHE-ICR * xxforms:context('GS25')/TAX5278-DETALHE-ICR div 100" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td>Percentual (%)</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="TAX5278-DETALHE-ICR">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('GS25')/MOA5025-DETALHE-124-ICR"
+														value="xxforms:context('GS25')/TAX5286-DETALHE-ICR * xxforms:context('GS25')/TAX5278-DETALHE-ICR div 100" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td>Valor</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="MOA5025-DETALHE-124-ICR" />
+										</xhtml:td>
+									</xhtml:tr>
+								</xhtml:table>
+							</xhtml:td>
+							<xhtml:td>
+								<xhtml:table class="table">
+									<xhtml:td> Descontos (%)</xhtml:td>
+									<xhtml:td>
+										<xf:input ref="PCD5245-DETALHE-TD" />
+									</xhtml:td>
+									<xhtml:tr>
+										<!-- AUX_VLR_ITEM_SONAE = (((GS28PRI5125-BRG * GS25QTY6063-21) - MOA5025-DETALHE-204-TD) +
+															MOA5025-DETALHE-124-IPI + MOA5025-DETALHE-23-OTE) -->
+										<xhtml:td> Descontos (R$)</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="MOA5025-DETALHE-204-TD">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('GS25')/AUX_VLR_ITEM_SONAE"
+														value="(((xxforms:context('GS25')/GS28PRI5125-BRG * xxforms:context('GS25')/xxforms:context('GS25')/GS25QTY6063-21) - xxforms:context('GS25')/MOA5025-DETALHE-204-TD) + xxforms:context('GS25')/MOA5025-DETALHE-124-IPI + xxforms:context('GS25')/MOA5025-DETALHE-23-OTE)" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td> Despesas (R$)</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="MOA5025-DETALHE-23-OTE">
+												<xf:alert>Obrigat�rio</xf:alert>
+												<xf:action ev:event="xforms-value-changed">
+													<xf:setvalue
+														ref="xxforms:context('GS25')/AUX_VLR_ITEM_SONAE"
+														value="(((xxforms:context('GS25')/GS28PRI5125-BRG * xxforms:context('GS25')/GS25QTY6063-21) - xxforms:context('GS25')/MOA5025-DETALHE-204-TD) + xxforms:context('GS25')/MOA5025-DETALHE-124-IPI + xxforms:context('GS25')/MOA5025-DETALHE-23-OTE)" />
+												</xf:action>
+											</xf:input>
+										</xhtml:td>
+									</xhtml:tr>
+									<xhtml:tr>
+										<xhtml:td>Total do Item</xhtml:td>
+										<xhtml:td>
+											<xf:input ref="AUX_VLR_ITEM_SONAE" />
+										</xhtml:td>
+									</xhtml:tr>
+								</xhtml:table>
+							</xhtml:td>
+						</xhtml:tr>
+					</xhtml:table>
+
+				</xf:group>
+			</xhtml:div>
+			<xhtml:div class="tab-pane" id="totais">
+				<xhtml:table class="table table-bordered">
+					<xhtml:tr>
+						<xhtml:th colspan="2">Sum�rio</xhtml:th>
+					</xhtml:tr>
+					<xhtml:tr>
+						<xhtml:td>
+							<xhtml:table class="table">
+								<xhtml:tr>
+									<xhtml:td class="minimum">Valor Descontos da Nota</xhtml:td>
+									<!--  VERIFICAR ESTE CAMPO  -->
+									<xhtml:td>
+										<xf:input size="19" ref="instance('order')/MOA5025-79">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/MOA5025-79" value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Valor Descontos Itens</xhtml:td>
+									<!--  Calcula o Valor Total dos Descontos  -->
+									<xhtml:td>
+										<xf:input size="19"
+											ref="instance('order')/GS25/MOA5025-DETALHE-204-TD">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/MOA5025-52" value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Valor das Despesas</xhtml:td>
+									<!--  Calcula o Valor Total das Despesas  -->
+									<xhtml:td>
+										<xf:input
+											ref="sum(instance('order')/GS25/MOA5025-DETALHE-23-OTE)">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/MOA5025-50" value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Valor de IRRF</xhtml:td>
+									<xhtml:td>
+										<xf:input size="19" ref="instance('order')/MOA5025-124-IRF">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/MOA5025-124-IRF"
+													value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Valor do INSS</xhtml:td>
+									<xhtml:td>
+										<xf:input size="19" ref="instance('order')/MOA5025-124-ISS">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/MOA5025-124-ISS"
+													value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Valor do Funrural</xhtml:td>
+									<xhtml:td>
+										<xf:input size="19" ref="instance('order')/MOA5025-124-FRR">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/MOA5025-124-FRR"
+													value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+							</xhtml:table>
+						</xhtml:td>
+						<xhtml:td>
+							<xhtml:table class="table">
+								<xhtml:tr>
+									<xhtml:td class="minimum">Base de Calculo de IPI</xhtml:td>
+									<xhtml:td>
+										<!--  Calcula o Valor Total da Base de C�lculo do IPI  -->
+										<xf:input
+											ref="sum(instance('order')/GS25/TAX5286-DETALHE-IPI)">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/TAX5286-IPI" value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Valor Total de IPI</xhtml:td>
+									<xhtml:td>
+										<xf:input
+											ref="sum(instance('order')/GS25/MOA5025-DETALHE-124-IPI)">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/MOA5025-124-IPI"
+													value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Base de Calculo de ICM</xhtml:td>
+									<xhtml:td>
+										<!--  Calcula o Valor Total da Base de C�lculo do ICM  -->
+										<xf:input
+											ref="sum(instance('order')/GS25/TAX5286-DETALHE-ICM)">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/TAX5286-ICM" value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Valor Total de ICM</xhtml:td>
+									<xhtml:td>
+										<!--  Calcula o Valor Total do ICM  -->
+										<xf:input size="19"
+											ref="sum(instance('order')/GS25/MOA5025-DETALHE-124-ICM)">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/MOA5025-124-ICM"
+													value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Base de Calculo de ICM de Responsabilidade</xhtml:td>
+									<xhtml:td>
+										<!--  Calcula o Valor Total da Base de C�lculo do ICM  -->
+										<xf:input size="19"
+											ref="sum(instance('order')/GS25/TAX5286-DETALHE-ICR)">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/TAX5286-ICR" value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Valor Total de ICM de Responsabilidade</xhtml:td>
+									<xhtml:td>
+										<!--  Calcula o Valor Total do ICM  -->
+										<xf:input size="19"
+											ref="sum(instance('order')/GS25/MOA5025-DETALHE-124-ICR)">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/MOA5025-124-ICR"
+													value="." />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+								<xhtml:tr>
+									<xhtml:td class="minimum">Valor Total da Nota</xhtml:td>
+									<!-- 									<xf:input ref="instance('order')/MOA5025-124-ICR"> -->
+									<!-- 										<xf:alert>Obrigat�rio</xf:alert> -->
+									<!-- 									</xf:input> -->
+									<!-- 									<xf:input ref="instance('order')/MOA5025-50"> -->
+									<!-- 										<xf:alert>Obrigat�rio</xf:alert> -->
+									<!-- 									</xf:input> -->
+									<xf:input class="invisivel"
+										ref="sum(instance('order')/GS25/AUX_VLR_ITEM_SONAE)">
+										<xf:alert>Obrigat�rio</xf:alert>
+										<xf:action ev:event="xforms-value-changed">
+											<xf:setvalue ref="instance('order')/TOTAL-ITEM-SONAE"
+												value="." />
+										</xf:action>
+									</xf:input>
+
+									<xhtml:td>
+										<!--<xf:input xmlns:xf="http://www.w3.org/2002/xforms" size="19" readonly="true" ref="instance('order')/MOA5025-39"/>-->
+										<xf:input ref="sum(instance('order')/GS25/AUX_VLR_ITEM_SONAE)">
+											<xf:alert>Obrigat�rio</xf:alert>
+											<xf:action ev:event="xforms-value-changed">
+												<xf:setvalue ref="instance('order')/MOA5025-39"
+													value=".  + instance('order')/MOA5025-124-ICR + instance('order')/MOA5025-50" />
+											</xf:action>
+										</xf:input>
+									</xhtml:td>
+								</xhtml:tr>
+							</xhtml:table>
+						</xhtml:td>
+					</xhtml:tr>
+				</xhtml:table>
+
+			</xhtml:div>
+		</xhtml:div>
+
+		<xf:trigger id="salvar">
+			<xf:label>
+				<i class="icon-ok" />
+				<xf:output ref="instance('tmp')/textoSalvar" />
+			</xf:label>
+			<xf:action ev:event="DOMActivate">
+				<xf:send submission="save.var" />
+				<xf:setvalue ref="xxforms:instance('work')/associatedFile"
+					value="concat('Pedido: ',instance('order')/BGM1004,' - ' ,instance('order')/GS02NAD3036-BY)" />
+				<xf:setvalue ref="xxforms:instance('work')/searchRef"
+					value="concat('Pedido: ',instance('order')/BGM1004,' - ' ,instance('order')/GS02NAD3036-BY)" />
+				<xf:send submission="save.searchRef" />
+				<xf:action if="instance('tmp')/valido eq 'true'">
+					<xxforms:script>window.enableButtons();</xxforms:script>
+				</xf:action>
+				<xf:setvalue ref="instance('tmp')/textoSalvar" value="'Salvo'" />
+				<xf:dispatch name="fr-visit-all" targetid="error-summary" />
+				<xf:refresh />
+				<xf:dispatch name="fr-update" targetid="error-summary" />
+			</xf:action>
+		</xf:trigger>
+
+		<xf:input id="vars-changed" class="invisivel"
+			ref="xxforms:serialize(instance('order'),'xml')">
+			<xf:action ev:event="xforms-value-changed">
+				<xf:setvalue ref="instance('tmp')/textoSalvar" value="'Salvar'" />
+			</xf:action>
+		</xf:input>
+		<xf:input id="valido-change" class="invisivel"
+			ref="instance('tmp')/valido">
+			<xf:action ev:event="xforms-value-changed">
+				<xf:action if="instance('tmp')/valido eq 'false'">
+					<xxforms:script>window.disableButtons();</xxforms:script>
+				</xf:action>
+			</xf:action>
+		</xf:input>
+	</xf:group>
+			  	<fr:xforms-inspector /> 
+	<script>
+		$(function() {
+			$('input[type=text], select').addClass('form-control');
+		})
+	</script>
+	<fr:error-summary observer="form-exec-group"
+		errors-count-ref="instance('tmp')/erros"
+		valid-ref="instance('tmp')/valido">
+		<fr:label xmlns:fr="Erros no Formul?rio" />
+	</fr:error-summary>
+</xhtml:body>
+</xhtml:html>

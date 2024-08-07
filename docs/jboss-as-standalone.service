@@ -1,0 +1,16 @@
+[Unit]
+Description=Jboss Application Server
+After=network.target
+
+[Service]
+Type=idle
+Environment=JBOSS_HOME=/home/cecdev/jboss-as-7.1.1.Final
+User=cecdev
+ExecStart=/home/cecdev/jboss-as-7.1.1.Final/bin/standalone.sh -b 0.0.0.0
+ExecStartPost=/home/cecdev/cli/postStart.sh
+TimeoutStartSec=600
+TimeoutStopSec=600
+
+[Install]
+WantedBy=multi-user.target
+
